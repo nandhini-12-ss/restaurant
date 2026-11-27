@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senthur Restaurant</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf0;
+    color: #333;
+}
+
+header {
+    background: #5b160d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #ffc857;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.hero {
+    height: 500px;
+    background:
+    linear-gradient(#0008, #0008),
+    url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1400')
+    center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #ffc857;
+}
+
+.hero p {
+    font-size: 21px;
+    margin: 20px;
+}
+
+button {
+    background: #e9a52b;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffc857;
+}
+
+section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #791f12;
+    margin-bottom: 25px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.food {
+    background: white;
+    width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0002;
+}
+
+.food h3 {
+    margin: 12px;
+    color: #791f12;
+}
+
+.food p {
+    margin: 10px;
+}
+
+.food img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+footer {
+    background: #5b160d;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SENTHUR</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <h1>SENTHUR RESTAURANT</h1>
+    <p>Enjoy the Taste of Tradition!</p>
+    <button onclick="showMessage()">
+        Explore Our Menu
+    </button>
+</div>
+
+<section id="about">
+    <h2>Welcome to Senthur Restaurant</h2>
+    <p>
+        Experience delicious food, authentic flavours
+        and wonderful hospitality.
+        We serve fresh and tasty food for everyone.
+    </p>
+</section>
+
+<section id="menu">
+    <h2>Our Special Menu</h2>
+
+    <div class="menu">
+
+        <div class="food">
+            <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=500">
+            <h3>Masala Dosa</h3>
+            <p>Traditional crispy dosa</p>
+            <b>₹80</b>
+        </div>
+
+        <div class="food">
+            <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=500">
+            <h3>South Indian Meals</h3>
+            <p>Authentic traditional meals</p>
+            <b>₹150</b>
+        </div>
+
+        <div class="food">
+            <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?w=500">
+            <h3>Chicken Biryani</h3>
+            <p>Delicious spicy biryani</p>
+            <b>₹180</b>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Visit Senthur Restaurant and enjoy delicious food!</p>
+    <p>Phone: +91 XXXXX XXXXX</p>
+    <p>Address: Add Your Restaurant Address</p>
+</section>
+
+<footer>
+    <p>© 2026 Senthur Restaurant</p>
+    <p>Thank You for Visiting Us!</p>
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("menu").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    alert("Welcome to Senthur Restaurant!");
+}
+</script>
+
+</body>
+</html>
