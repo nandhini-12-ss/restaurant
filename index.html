@@ -26,6 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -38,10 +39,16 @@ nav a {
     color: white;
     text-decoration: none;
     margin: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffc857;
+    text-decoration: underline;
 }
 
 .hero {
-    height: 500px;
+    min-height: 500px;
     background:
     linear-gradient(#0008, #0008),
     url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1400')
@@ -119,11 +126,45 @@ h2 {
     border-radius: 8px;
 }
 
+.food a {
+    color: #791f12;
+    text-decoration: none;
+}
+
+.food a:hover {
+    text-decoration: underline;
+}
+
+.contact a {
+    color: #791f12;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
 footer {
     background: #5b160d;
     color: white;
     padding: 25px;
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
 }
 </style>
 </head>
@@ -144,6 +185,7 @@ footer {
 <div class="hero" id="home">
     <h1>SENTHUR RESTAURANT</h1>
     <p>Enjoy the Taste of Tradition!</p>
+
     <button onclick="showMessage()">
         Explore Our Menu
     </button>
@@ -164,34 +206,73 @@ footer {
     <div class="menu">
 
         <div class="food">
-            <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=500">
+            <img
+            src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=500"
+            alt="Masala Dosa"
+            loading="lazy">
+
             <h3>Masala Dosa</h3>
             <p>Traditional crispy dosa</p>
             <b>₹80</b>
         </div>
 
         <div class="food">
-            <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=500">
+            <img
+            src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=500"
+            alt="South Indian Meals"
+            loading="lazy">
+
             <h3>South Indian Meals</h3>
             <p>Authentic traditional meals</p>
             <b>₹150</b>
         </div>
 
         <div class="food">
-            <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?w=500">
+            <img
+            src="https://images.pexels.com/photos/20642812/pexels-photo-20642812.jpeg"
+            alt="Chicken Biryani"
+            loading="lazy">
+
             <h3>Chicken Biryani</h3>
             <p>Delicious spicy biryani</p>
             <b>₹180</b>
+            <p>
+                <a href="https://www.pexels.com/photo/rice-with-chicken-20642812/"
+                target="_blank" rel="noopener">
+                View Image
+                </a>
+            </p>
         </div>
 
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="contact">
     <h2>Contact Us</h2>
+
     <p>Visit Senthur Restaurant and enjoy delicious food!</p>
-    <p>Phone: +91 XXXXX XXXXX</p>
-    <p>Address: Add Your Restaurant Address</p>
+
+    <p>
+        Phone:
+        <a href="tel:+91XXXXXXXXXX">
+        +91 XXXXX XXXXX
+        </a>
+    </p>
+
+    <p>
+        Address:
+        <a href="https://www.google.com/maps"
+        target="_blank" rel="noopener">
+        Find Us on Google Maps
+        </a>
+    </p>
+
+    <p>
+        Email:
+        <a href="mailto:senthurrestaurant@gmail.com">
+        Contact Us
+        </a>
+    </p>
 </section>
 
 <footer>
@@ -211,3 +292,5 @@ function showMessage() {
 
 </body>
 </html>
+
+
